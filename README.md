@@ -1,4 +1,4 @@
 redlotus.github.io
 ==================
 
-My own page
+My very first blog 
