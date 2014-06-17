@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'Doan Luong Van'
-SITENAME = 'Redlotus'
-SITEURL = 'http://redlotus.github.io/'
+AUTHOR = 'redlotus'
+SITENAME = 'redlotus'
+SITEURL = 'http://redlotus.github.io'
 
 PATH = 'content'
 
@@ -18,10 +18,10 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 # Blogroll
-LINKS = (('pelican', 'http://getpelican.com/'),
-         ('python.org', 'http://python.org/'),
-         ('jinja2', 'http://jinja.pocoo.org/'),
-         ('archlinuxvn', 'http://archlinuxvn.org/'),)
+LINKS = (('pelican', 'http://getpelican.com'),
+         ('python.org', 'http://python.org'),
+         ('jinja2', 'http://jinja.pocoo.org'),
+         ('archlinuxvn', 'http://archlinuxvn.org'),)
 
 # Social widget
 SOCIAL = (('github', 'https://github.com/redlotus'),
@@ -42,8 +42,11 @@ TAG_SAVE_AS = 'tag/{slug}/index.html'
 DEFAULT_DATE_FORMAT = ('%a %b %d %Y')
 
 # Specify theme
-THEME = "/home/redlotus/dev/uikit"
+THEME = "/home/redlotus/dev/lotus"
 
 # Plugins
-PLUGIN_PATH = '/home/redlotus/dev/pelican-plugins'
-PLUGINS = ['neighbors']
+PLUGIN_PATH = ["/home/redlotus/dev/pelican-plugins"]
+PLUGINS = ["neighbors"]
+
+# Menu
+MENUITEMS = (('main', '#'),)
