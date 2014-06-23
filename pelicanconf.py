@@ -49,4 +49,6 @@ PLUGIN_PATH = ["/home/redlotus/dev/pelican-plugins"]
 PLUGINS = ["neighbors"]
 
 # Menu
-MENUITEMS = (('main', '#'),)
+MENUITEMS = (('main', 'index.html'),
+            ('about', 'pages/about.html'),
+            ('resume', 'pages/cv.html'),)
