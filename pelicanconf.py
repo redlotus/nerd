@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'redlotus'
 SITENAME = 'redlotus'
-SITEURL = 'http://redlotus.github.io'
+SITEURL = 'http://redlotus.github.io/redlotus'
 
 PATH = 'content'
 
@@ -27,8 +27,7 @@ LINKS = (('pelican', 'http://getpelican.com'),
 SOCIAL = (('github', 'https://github.com/redlotus'),
         ('twitter', 'https://twitter.com/r3d10tu5'),)
 
-DEFAULT_PAGINATION = 5
-
+# DEFAULT_PAGINATION = 3
 # URL settings
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
@@ -43,7 +42,6 @@ DEFAULT_DATE_FORMAT = ('%a %b %d %Y')
 
 # Specify theme
 THEME = "/home/redlotus/dev/lotus"
-
 # Plugins
 PLUGIN_PATH = ["/home/redlotus/dev/pelican-plugins"]
 PLUGINS = ["neighbors"]
