@@ -1,0 +1,256 @@
+/* use Oxygen as default font */
+@import "https://fonts.googleapis.com/css?family=Oxygen";
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+   font-family: oxygen;
+}
+
+a {
+    text-decoration: none;
+    color: #3d92c9;
+    border-bottom: #dddddd 1px solid;
+}
+a:hover {
+    color: #444444;
+    border-bottom: #000000 1px solid;
+}
+
+/*
+a:focus {
+    text-decoration: underline;
+}
+*/
+
+/* LAYOUT CSS */
+.pure-img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+#layout {
+    padding: 0;
+}
+/* header */
+.header {
+    text-align: center;
+    top: auto;
+    margin: 16px auto;
+}
+
+.header .navbar {
+  display: inline-block;
+  height: 24px;
+  margin: 0 auto;
+  padding: 2px 0 0 0;
+  max-width: 320px;
+}
+.header .navbar a {
+  background: transparent;
+  color: #3d92c9;
+  font-size: 1.25em;
+  padding: 2px;
+  margin-top: 16px;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+/*
+.sidebar {
+    background: rgb(61, 79, 93);
+    color: #fff;
+}
+
+.brand-title,
+.brand-tagline {
+    margin: 0;
+}
+.brand-title {
+    text-transform: uppercase;
+}
+.brand-tagline {
+    font-weight: 300;
+    color: rgb(176, 202, 219);
+}
+*/
+div.index p.intro {
+  max-width: 396px;
+  margin: 0 auto;
+  padding: 0 10px;
+  font-size: 3em;
+  line-height: 1em;
+  margin-bottom: 0;
+  color: #000000;
+}
+div.index p.intro i {
+  color: #666666;
+}
+div.index .list {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+div.index .list ul {
+  padding: 0;
+  list-style-type: none;
+}
+div.index .list ul li {
+  padding: 5px 0;
+}
+div.index .list ul li a {
+  display: block;
+}
+div.index .list ul li h2 {
+  font-size: 0.875em;
+  display: inline;
+  font-weight: normal;
+}
+div.index .list ul li span {
+  text-align: right;
+  float: right;
+  padding-top: 3px;
+  text-transform: uppercase;
+  font-size: 0.875em;
+  color: #999999;
+}
+div.index .list p {
+  margin: 10px auto;
+  font-size: 1.5em;
+}
+
+.content-subhead {
+    text-transform: uppercase;
+    color: #aaa;
+    border-bottom: 1px solid #eee;
+    padding: 0.4em 0;
+    font-size: 80%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+/* article */
+.content {
+    max-width: 750px;
+    /* padding: 2em 1em 0; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post {
+    padding-bottom: 2em;
+}
+.post h1 {
+    max-width: 800px;
+    margin: 20px auto 0px;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 2.55em;
+    font-weight: 300;
+}
+.post h2,
+.post h3,
+.post h4,
+.post h5,
+.post h6 {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px 10px;
+}
+.post .content {
+    font-size: 1em;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 6px 10px;
+}
+.post .content ul,
+.post .content ol {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 0 0 0 60px;
+    list-style-type: square;
+    line-height: 1.4;
+}
+.post .content ul li,
+.post .content ol li {
+    padding: 3px 0;
+}
+.post .meta {
+    font-size: 0.875em;
+    max-width: 750px;
+    margin: 10px auto 20px;
+    padding: 10px 10px 10px 50px;
+    background-color: #f8f8f8;
+    border: 1px solid #d2d2d2;
+}
+.post .content code {
+    background-color: #f7f7f7;
+    border: 1px solid #e1e1e1;
+    padding: 2px 4px;
+    font-size: 14px;
+    page-break-inside: avoid;
+    word-wrap: break-word;
+}
+.post .avatar {
+    border-radius: 50px;
+    float: right;
+    margin-left: 1em;
+}
+.post .description {
+    font-family: Georgia, "Cambria", serif;
+    color: #444;
+    line-height: 1.8em;
+}
+/* do not use 
+.post-category {
+    margin: 0 0.1em;
+    padding: 0.3em 1em;
+    color: #fff;
+    background: #999;
+    font-size: 80%;
+}
+    .post-category-design {
+        background: #5aba59;
+    }
+    .post-category-pure {
+        background: #4d85d1;
+    }
+    .post-category-yui {
+        background: #8156a7;
+    }
+    .post-category-js {
+        background: #df2d4f;
+    }
+
+.post-images {
+    margin: 1em 0;
+}
+.post-image-meta {
+    margin-top: -3.5em;
+    margin-left: 1em;
+    color: #fff;
+    text-shadow: 0 1px 1px #333;
+}
+*/
+/* footer */
+.footer {
+    text-align: center;
+    padding: 1em 0;
+}
+.footer a {
+    color: #cccccc;
+    font-size: 80%;
+}
+.footer .pure-menu a:hover,
+.footer .pure-menu a:focus {
+    background: none;
+}
+.footer p {
+  color: #999999;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 1em;
+}
