@@ -1,4 +1,10 @@
-*.pid
-*.pic
-output/
+*.pyd
 *.pyc
+output/
+<<<<<<< HEAD
+*.pyc
+=======
+.ropeproject/
+__pycache__/
+cache/
+>>>>>>> origin/master
