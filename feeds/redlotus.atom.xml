@@ -1,2 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>redlotus</title><link href="http://redlotus.github.io/redlotus/" rel="alternate"></link><link href="http://redlotus.github.io/redlotus/feeds/redlotus.atom.xml" rel="self"></link><id>http://redlotus.github.io/redlotus/</id><updated>2014-03-06T00:33:00+07:00</updated><entry><title>Hello World</title><link href="http://redlotus.github.io/redlotus/posts/2014/Mar/hello/" rel="alternate"></link><updated>2014-03-06T00:33:00+07:00</updated><author><name>redlotus</name></author><id>tag:redlotus.github.io,2014-03-06:redlotus/posts/2014/Mar/hello/</id><summary type="html">&lt;p&gt;My &lt;em&gt;very first&lt;/em&gt; post using &lt;a href="http://docs.getpelican.com/en/3.3.0/getting_started.html"&gt;Pelican&lt;/a&gt;&lt;/p&gt;</summary><category term="pelican"></category><category term="web"></category></entry></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>redlotus</title><link href="http://redlotus.github.io/nerd/" rel="alternate"></link><link href="http://redlotus.github.io/nerd/feeds/redlotus.atom.xml" rel="self"></link><id>http://redlotus.github.io/nerd/</id><updated>2015-01-17T23:51:00+07:00</updated><entry><title>BeagleBoneBlack Hack: SSH thông qua USB</title><link href="http://redlotus.github.io/nerd/posts/2015/Jan/ssh_to_bbb_through_usb/" rel="alternate"></link><updated>2015-01-17T23:51:00+07:00</updated><author><name>redlotus</name></author><id>tag:redlotus.github.io,2015-01-17:nerd/posts/2015/Jan/ssh_to_bbb_through_usb/</id><summary type="html">&lt;h1&gt;SSH vào beaglebone thông qua USB&lt;/h1&gt;
+&lt;h3&gt;&lt;em&gt;[Trên beaglebone]&lt;/em&gt;&lt;/h3&gt;
+&lt;h4&gt;&lt;em&gt;Đầu tiên chúng ta phải load module g_ether (ethernet gadget)&lt;/em&gt;&lt;/h4&gt;
+&lt;p&gt;Tự động load khi khởi động:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;echo g_ether &amp;gt; /etc/modules-load.d/g_ether.conf  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Hay chỉ load khi nào cần:  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;modprobe g_ether  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;&lt;em&gt;Tạo profile sử dụng với netctl&lt;/em&gt;&lt;/h4&gt;
+&lt;p&gt;Tôi đặt tên cho profile là usb0&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;vim /etc/netctl/usb0  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Sử dụng ip tĩnh&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Connection=ethernet
+Description='Connection via USB'
+Interface=usb0
+IP=static
+Address=('192.168.7.2/30')&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Cho profile này tự động chạy mỗi khi khởi động&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;netctl enable usb0  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;&lt;em&gt;[Trên máy host(dùng để kết nối với beaglebone)]&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;Khi beaglebone đã kết nối với host qua usb thì trên máy host thì khi dùng &lt;code&gt;ip link&lt;/code&gt; kiểm tra sẽ thấy xuất hiện thêm một interface. Tạm gọi là enp*.&lt;br /&gt;
+Chúng ta sẽ dùng interface này để kết nối với beaglebone&lt;br /&gt;
+Một trong các cách là chúng ta có thể tạo profile và dùng với netctl như trên, hoặc thủ công hơn thì chúng ta thực hiện mọi việc bằng tay thông qua lệnh &lt;code&gt;ip&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ip link set enp&lt;em&gt; up
+Đặt ip tĩnh cho interface, dùng chung dải mạng với beaglebone
+ip addr add 192.168.7.1/30 broadcast 192.168.7.255 dev enp&lt;/em&gt;  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Để tránh xung đột ta phải tắt dhcpcd service và networkd đi, sau này trở đi chúng ta có thể dùng dhclient khi nào cần thì sẽ tiện dụng hơn.
+systemctl disable dhcpcd.service
+systemctl disable networkd.service&lt;/p&gt;
+&lt;p&gt;Kiểm tra kết nối
+ping -c 3 192.168.7.1 &lt;/p&gt;
+&lt;p&gt;[TODO] Thiết lập Kết nối đến internet  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ip route add default via default_gateway
+echo 1 &amp;gt; /proc/sys/net/ipv4/ip_forward&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;/sbin/iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
+/sbin/iptables -A FORWARD -i usb0 -o eth1 -j ACCEPT&lt;/p&gt;</summary><category term="diy"></category><category term="beaglebone"></category></entry><entry><title>Hello World</title><link href="http://redlotus.github.io/nerd/posts/2014/Mar/hello/" rel="alternate"></link><updated>2014-03-06T00:33:00+07:00</updated><author><name>redlotus</name></author><id>tag:redlotus.github.io,2014-03-06:nerd/posts/2014/Mar/hello/</id><summary type="html">&lt;p&gt;My &lt;em&gt;very first&lt;/em&gt; post using &lt;a href="http://docs.getpelican.com/en/3.3.0/getting_started.html"&gt;Pelican&lt;/a&gt;&lt;/p&gt;</summary><category term="pelican"></category><category term="web"></category></entry></feed>
