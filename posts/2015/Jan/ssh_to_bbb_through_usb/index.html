@@ -32,32 +32,34 @@
 			            title="Permalink to BeagleBoneBlack Hack: SSH thông qua USB"></a>
 		            BeagleBoneBlack Hack: SSH thông qua USB
 	            </h1>
-	            <div class="content"><h1>SSH vào beaglebone thông qua USB</h1>
-<h3><em>[Trên beaglebone]</em></h3>
-<h4><em>Đầu tiên chúng ta phải load module g_ether (ethernet gadget)</em></h4>
-<p>Tự động load khi khởi động:
+	            <div class="content"><h2>SSH vào beaglebone thông qua USB</h2>
+<h4><em>[Trên beaglebone]</em></h4>
+<h5><em>Đầu tiên chúng ta phải load module g_ether (ethernet gadget)</em></h5>
+<p>Tự động load khi khởi động:<br />
 <code>echo g_ether &gt; /etc/modules-load.d/g_ether.conf</code>  </p>
 <p>Hay chỉ load khi nào cần:<br />
 <code>modprobe g_ether</code>  </p>
-<h4><em>Tạo profile sử dụng với netctl</em></h4>
-<p>Tôi đặt tên cho profile là usb0
+<h5><em>Tạo profile sử dụng với netctl</em></h5>
+<p>Tôi đặt tên cho profile là usb0<br />
 <code>vim /etc/netctl/usb0</code>  </p>
-<p>Sử dụng ip tĩnh
-<code>Connection=ethernet  
-Description='Connection via USB'  
-Interface=usb0  
-IP=static  
-Address=('192.168.7.2/30')</code>  </p>
-<p>Cho profile này tự động chạy mỗi khi khởi động
+<p>Sử dụng ip tĩnh  </p>
+<blockquote>
+<p>Connection=ethernet<br />
+Description='Connection via USB'<br />
+Interface=usb0<br />
+IP=static<br />
+Address=('192.168.7.2/30')`  </p>
+</blockquote>
+<p>Cho profile này tự động chạy mỗi khi khởi động<br />
 <code>netctl enable usb0</code>  </p>
-<h3><em>[Trên máy host(dùng để kết nối với beaglebone)]</em></h3>
+<h4><em>[Trên máy host(dùng để kết nối với beaglebone)]</em></h4>
 <p>Khi beaglebone đã kết nối với host qua usb thì trên máy host thì khi dùng <code>ip link</code> kiểm tra sẽ thấy xuất hiện thêm một interface. Tạm gọi là enp*.<br />
 Chúng ta sẽ dùng interface này để kết nối với beaglebone<br />
-Một trong các cách là chúng ta có thể tạo profile và dùng với netctl như trên, hoặc thủ công hơn thì chúng ta thực hiện mọi việc bằng tay thông qua lệnh <code>ip</code></p>
-<p><code>ip link set enp* up</code><br />
+Một trong các cách là chúng ta có thể tạo profile và dùng với netctl như trên, hoặc thủ công hơn thì chúng ta thực hiện mọi việc bằng tay thông qua lệnh <code>ip</code><br />
+<code>ip link set enp* up</code><br />
 Đặt ip tĩnh cho interface, dùng chung dải mạng với beaglebone<br />
 <code>ip addr add 192.168.7.1/30 broadcast 192.168.7.255 dev enp*</code>  </p>
-<p>Để tránh xung đột ta phải tắt dhcpcd service và networkd đi, sau này trở đi chúng ta có thể dùng dhclient khi nào cần thì sẽ tiện dụng hơn.
+<p>Để tránh xung đột ta phải tắt dhcpcd service và networkd đi, sau này trở đi chúng ta có thể dùng dhclient khi nào cần thì sẽ tiện dụng hơn.<br />
 <code>systemctl disable dhcpcd.service  
 systemctl disable networkd.service</code>  </p>
 <p>Kiểm tra kết nối<br />
