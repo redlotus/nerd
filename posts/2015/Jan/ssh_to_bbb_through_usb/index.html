@@ -5,8 +5,8 @@
     <title>redlotus</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
-    <link rel="stylesheet" href="/nerd/theme/css/blog.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://redlotus.github.io/nerd/theme/css/blog.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
   <meta name="tags" contents="diy" />
 <meta name="tags" contents="beaglebone" />
@@ -35,52 +35,40 @@
 	            <div class="content"><h1>SSH vào beaglebone thông qua USB</h1>
 <h3><em>[Trên beaglebone]</em></h3>
 <h4><em>Đầu tiên chúng ta phải load module g_ether (ethernet gadget)</em></h4>
-<p>Tự động load khi khởi động:</p>
-<blockquote>
-<p>echo g_ether &gt; /etc/modules-load.d/g_ether.conf  </p>
-</blockquote>
-<p>Hay chỉ load khi nào cần:  </p>
-<blockquote>
-<p>modprobe g_ether  </p>
-</blockquote>
+<p>Tự động load khi khởi động:
+<code>echo g_ether &gt; /etc/modules-load.d/g_ether.conf</code>  </p>
+<p>Hay chỉ load khi nào cần:<br />
+<code>modprobe g_ether</code>  </p>
 <h4><em>Tạo profile sử dụng với netctl</em></h4>
-<p>Tôi đặt tên cho profile là usb0</p>
-<blockquote>
-<p>vim /etc/netctl/usb0  </p>
-</blockquote>
-<p>Sử dụng ip tĩnh</p>
-<blockquote>
-<p>Connection=ethernet
-Description='Connection via USB'
-Interface=usb0
-IP=static
-Address=('192.168.7.2/30')</p>
-</blockquote>
-<p>Cho profile này tự động chạy mỗi khi khởi động</p>
-<blockquote>
-<p>netctl enable usb0  </p>
-</blockquote>
+<p>Tôi đặt tên cho profile là usb0
+<code>vim /etc/netctl/usb0</code>  </p>
+<p>Sử dụng ip tĩnh
+<code>Connection=ethernet  
+Description='Connection via USB'  
+Interface=usb0  
+IP=static  
+Address=('192.168.7.2/30')</code>  </p>
+<p>Cho profile này tự động chạy mỗi khi khởi động
+<code>netctl enable usb0</code>  </p>
 <h3><em>[Trên máy host(dùng để kết nối với beaglebone)]</em></h3>
 <p>Khi beaglebone đã kết nối với host qua usb thì trên máy host thì khi dùng <code>ip link</code> kiểm tra sẽ thấy xuất hiện thêm một interface. Tạm gọi là enp*.<br />
 Chúng ta sẽ dùng interface này để kết nối với beaglebone<br />
 Một trong các cách là chúng ta có thể tạo profile và dùng với netctl như trên, hoặc thủ công hơn thì chúng ta thực hiện mọi việc bằng tay thông qua lệnh <code>ip</code></p>
-<blockquote>
-<p>ip link set enp<em> up
-Đặt ip tĩnh cho interface, dùng chung dải mạng với beaglebone
-ip addr add 192.168.7.1/30 broadcast 192.168.7.255 dev enp</em>  </p>
-</blockquote>
+<p><code>ip link set enp* up</code><br />
+Đặt ip tĩnh cho interface, dùng chung dải mạng với beaglebone<br />
+<code>ip addr add 192.168.7.1/30 broadcast 192.168.7.255 dev enp*</code>  </p>
 <p>Để tránh xung đột ta phải tắt dhcpcd service và networkd đi, sau này trở đi chúng ta có thể dùng dhclient khi nào cần thì sẽ tiện dụng hơn.
-systemctl disable dhcpcd.service
-systemctl disable networkd.service</p>
-<p>Kiểm tra kết nối
-ping -c 3 192.168.7.1 </p>
+<code>systemctl disable dhcpcd.service  
+systemctl disable networkd.service</code>  </p>
+<p>Kiểm tra kết nối<br />
+<code>ping -c 3 192.168.7.1</code>  </p>
 <p>[TODO] Thiết lập Kết nối đến internet  </p>
 <blockquote>
-<p>ip route add default via default_gateway
-echo 1 &gt; /proc/sys/net/ipv4/ip_forward</p>
-</blockquote>
-<p>/sbin/iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
-/sbin/iptables -A FORWARD -i usb0 -o eth1 -j ACCEPT</p></div>
+<p>ip route add default via default_gateway<br />
+echo 1 &gt; /proc/sys/net/ipv4/ip_forward<br />
+/sbin/iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE<br />
+/sbin/iptables -A FORWARD -i usb0 -o eth1 -j ACCEPT  </p>
+</blockquote></div>
 	        </article>
 	        
 	        <div class="meta">
