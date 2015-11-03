@@ -1,11 +1,8 @@
-Title: CV
-Slug: cv
-
 # Résumé
 
 Lương Văn Doan  
 [doanlv92@gmail.com](doanlv92@gmail.com)  
-[http://redlotus.github.io](http://redlotus.github.io)  
+[https://github.com/redlotus](https://github.com/redlotus)  
 Mobile: 0972097776  
 Tan Binh Dist, HCMC  
 
