@@ -1,3 +1,8 @@
-*.pid
-*.pic
+*.pyd
+*.pyc
 output/
+*.pyc
+.ropeproject/
+__pycache__/
+cache/
+env/

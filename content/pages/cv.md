@@ -1,8 +1,14 @@
 # Résumé
 
+=======
+Title: Résumé
+Tags: cv
+Date: 2014-03-06 00:43
+Slug: cv
+
 Lương Văn Doan  
 [doanlv92@gmail.com](doanlv92@gmail.com)  
-[https://github.com/redlotus](https://github.com/redlotus)  
+[https://redlotus.github.io/redlotus](https://github.com/redlotus)  
 Mobile: 0972097776  
 Tan Binh Dist, HCMC  
 
@@ -26,5 +32,5 @@ I have learnt Software Engineering at FPT University. My major is Embedded Syste
 _Jan 2013 - Apr 2013_ - __FPT Software__ - _Internship_  
 FPT Software is a innovation company and good skills developing environment. Working with a large team under pressure following specific process, I have broadened my experience in professional work.  
 
-_2013 - now_ - __Vietnamese Arch Linux Users Group (ArchlinuxVN)__ - _Member_
+_2013 - now_ - __Vietnamese Arch Linux Users Group (ArchlinuxVN)__ - _Member_  
 ArchlinuxVN is a group for people who like, work on Linux and opensource systems discuss and help each other solve system's problems. This group teach me how to cooperate and work on community's project. I also improve my skills and techniques by discussing with people who are experts on their field.
