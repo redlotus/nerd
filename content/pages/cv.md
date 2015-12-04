@@ -1,4 +1,13 @@
 # Résumé
+<<<<<<< HEAD
+=======
+
+=======
+Title: Résumé
+Tags: cv
+Date: 2014-03-06 00:43
+Slug: cv
+>>>>>>> 4c507350ca6e812ccd78db411eff92990d8d12d0
 
 Lương Văn Doan  
 [doanlv92@gmail.com](doanlv92@gmail.com)  
