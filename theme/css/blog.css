@@ -1,16 +1,14 @@
 /* use Oxygen as default font */
-@import "https://fonts.googleapis.com/css?family=Oxygen";
 
+@import "https://fonts.googleapis.com/css?family=Oxygen";
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
 body {
-   font-family: oxygen;
+    font-family: oxygen;
 }
-
 a {
     text-decoration: none;
     color: #3d92c9;
@@ -20,44 +18,42 @@ a:hover {
     color: #444444;
     border-bottom: #000000 1px solid;
 }
-
 /*
 a:focus {
     text-decoration: underline;
 }
 */
-
 /* LAYOUT CSS */
+
 .pure-img-responsive {
     max-width: 100%;
     height: auto;
 }
-
 #layout {
     padding: 0;
 }
 /* header */
+
 .header {
     text-align: center;
     top: auto;
     margin: 16px auto;
 }
-
 .header .navbar {
-  display: inline-block;
-  height: 24px;
-  margin: 0 auto;
-  padding: 2px 0 0 0;
-  max-width: 320px;
+    display: inline-block;
+    height: 24px;
+    margin: 0 auto;
+    padding: 2px 0 0 0;
+    max-width: 320px;
 }
 .header .navbar a {
-  background: transparent;
-  color: #3d92c9;
-  font-size: 1.25em;
-  padding: 2px;
-  margin-top: 16px;
-  letter-spacing: 0.05em;
-  text-decoration: none;
+    background: transparent;
+    color: #3d92c9;
+    font-size: 1.25em;
+    padding: 2px;
+    margin-top: 16px;
+    letter-spacing: 0.05em;
+    text-decoration: none;
 }
 /*
 .sidebar {
@@ -77,51 +73,51 @@ a:focus {
     color: rgb(176, 202, 219);
 }
 */
+
 div.index p.intro {
-  max-width: 396px;
-  margin: 0 auto;
-  padding: 0 10px;
-  font-size: 3em;
-  line-height: 1em;
-  margin-bottom: 0;
-  color: #000000;
+    max-width: 396px;
+    margin: 0 auto;
+    padding: 0 10px;
+    font-size: 3em;
+    line-height: 1em;
+    margin-bottom: 0;
+    color: #000000;
 }
 div.index p.intro i {
-  color: #666666;
+    color: #666666;
 }
 div.index .list {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 0 10px;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 div.index .list ul {
-  padding: 0;
-  list-style-type: none;
+    padding: 0;
+    list-style-type: none;
 }
 div.index .list ul li {
-  padding: 5px 0;
+    padding: 5px 0;
 }
 div.index .list ul li a {
-  display: block;
+    display: block;
 }
 div.index .list ul li h2 {
-  font-size: 0.875em;
-  display: inline;
-  font-weight: normal;
+    font-size: 0.875em;
+    display: inline;
+    font-weight: normal;
 }
 div.index .list ul li span {
-  text-align: right;
-  float: right;
-  padding-top: 3px;
-  text-transform: uppercase;
-  font-size: 0.875em;
-  color: #999999;
+    text-align: right;
+    float: right;
+    padding-top: 3px;
+    text-transform: uppercase;
+    font-size: 0.875em;
+    color: #999999;
 }
 div.index .list p {
-  margin: 10px auto;
-  font-size: 1.5em;
+    margin: 10px auto;
+    font-size: 1.5em;
 }
-
 .content-subhead {
     text-transform: uppercase;
     color: #aaa;
@@ -131,15 +127,15 @@ div.index .list p {
     font-weight: 500;
     letter-spacing: 0.1em;
 }
-
 /* article */
+
 .content {
     max-width: 750px;
     /* padding: 2em 1em 0; */
+    
     margin-left: auto;
     margin-right: auto;
 }
-
 .post {
     padding-bottom: 2em;
 }
@@ -156,9 +152,9 @@ div.index .list p {
 .post h4,
 .post h5,
 .post h6 {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 10px 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 10px;
 }
 .post .content {
     font-size: 1em;
@@ -236,6 +232,7 @@ div.index .list p {
 }
 */
 /* footer */
+
 .footer {
     text-align: center;
     padding: 1em 0;
@@ -249,8 +246,8 @@ div.index .list p {
     background: none;
 }
 .footer p {
-  color: #999999;
-  margin: 0 auto;
-  text-align: justify;
-  font-size: 1em;
+    color: #999999;
+    margin: 0 auto;
+    text-align: justify;
+    font-size: 1em;
 }
