@@ -1,33 +1,27 @@
-Title: Résumé
-Tags: cv
-Date: 2014-03-06 00:43
-Slug: cv
+# Résumé
 
 Lương Văn Doan  
 [doanlv92@gmail.com](doanlv92@gmail.com)  
-[https://redlotus.github.io/redlotus](https://github.com/redlotus)  
+[https://redlotus.github.io](https://redlotus.github.io)   
 Mobile: 0972097776  
-Tan Binh Dist, HCMC  
+Dist 12, HCMC  
 
 ### Personality
-I am young, reponsible and willing to learn. I am passionate in researching or learning new things. I can also cooperate with team well. My interest are opensource solutions and flying drone.
-### Ability
-I have worked with these technologies:
+I am young, reponsible and willing to learn. I am passionate in learning new things. I am also interested in all things nerd (techinal things, diy stuffs, drone, etc).  
+I want to improve myself in various fields of software/system engineering and exchange knowledge.
+### Ability  
+I have worked well with these technologies:  
 
-- Programming: C, Java, C#, Python
-- MCU (microcontroller unit): PIC (16F877A), ARM (ARM9), AVR (Atmega168)
-- Framework: Struts 2 (Java), Hibernate (Java)
-- Revision Control: Git, SVN
-- Database: MySQL (MariaDB)
-- Operating System: Windows, Linux (Ubuntu, OpenSUSE, Arch Linux, Funtoo)
-- Others: Markdown, Jinja2
+- Programming: _Python_ for almost everything, sometimes I use _C_ (for my own small embedded projects) or _Rust_ (for fun). Web programming with _HTML_, _CSS_, _JS_ (_pure JS_, _jQuery_, _AngularJS_) is not so fimiliar but I can do too.  
+- Framework: _Flask_, _AngularJS_.  
+- Revision Control: _Git_, _SVN_ (rarely).  
+- Database: _MySQL_ (_MariaDB_), _MongoDB_. 
+- Operating System: _Linux_ (I am currently _Arch Linux_ user).  
+- System Operation: _Bash_, _SaltStack_ (CM), _Buildbot_ (CI), _fabric_, _nginx_, _uwsgi_, _supervisord_, _Grafana_, etc...  
 
-### Education and Work
-_Sep 2010 - now_  - __FPT University__ - _Student_  
-I have learnt Software Engineering at FPT University. My major is Embedded System. I have gotten base knowledge about Software Engineering there.
-
+### Work and Education
+_Aug 2014 - Sep 2015_ - __FPT Telecom__ - _Software Developer_   
+I am in Fshare.vn Project's back-end team. My duty are handling few parts of storage service's back-end, working on inside and other relative tools.  
 _Jan 2013 - Apr 2013_ - __FPT Software__ - _Internship_  
-FPT Software is a innovation company and good skills developing environment. Working with a large team under pressure following specific process, I have broadened my experience in professional work.  
-
-_2013 - now_ - __Vietnamese Arch Linux Users Group (ArchlinuxVN)__ - _Member_  
-ArchlinuxVN is a group for people who like, work on Linux and opensource systems discuss and help each other solve system's problems. This group teach me how to cooperate and work on community's project. I also improve my skills and techniques by discussing with people who are experts on their field.
+I am a trainee here in a short term. Working with a large team under pressure following specific process, I have broadened my experience in professional work process.  
+_2011 - 2015_ - __FPT University__ - _Software Engineering_

@@ -20,12 +20,11 @@ TRANSLATION_FEED_ATOM = None
 # Blogroll
 LINKS = (('pelican', 'http://getpelican.com'),
          ('python.org', 'http://python.org'),
-         ('jinja2', 'http://jinja.pocoo.org'),
          ('archlinuxvn', 'http://archlinuxvn.org'),)
 
 # Social widget
 SOCIAL = (('github', 'https://github.com/redlotus'),
-        ('twitter', 'https://twitter.com/r3d10tu5'),)
+          ('twitter', 'https://twitter.com/r3d10tu5'),)
 
 # DEFAULT_PAGINATION = 3
 # URL settings
@@ -48,5 +47,7 @@ PLUGINS = ["neighbors"]
 
 # Menu
 MENUITEMS = (('main', 'index.html'),
-            ('about', 'pages/about.html'),
-            ('resume', 'pages/cv.html'),)
+             ('about', 'pages/about.html'),
+             ('resume', 'pages/cv.html'),)
+# output
+OUTPUT_RETENTION=[".git"]
